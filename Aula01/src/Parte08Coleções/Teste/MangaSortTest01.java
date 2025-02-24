@@ -17,8 +17,8 @@ class MangaByIdComparator implements Comparator<Manga> {
 
 public class MangaSortTest01 {
     public static void main(String[] args) {
-        List<Manga> mangas = new ArrayList<>(6);
 
+        List<Manga> mangas = new ArrayList<>(6);
         mangas.add(new Manga(4L, "Dragon ball Z", 0.99));
         mangas.add(new Manga(1L, "Attack on titan", 9.99));
         mangas.add(new Manga(2L, "Berserk", 7.25));
