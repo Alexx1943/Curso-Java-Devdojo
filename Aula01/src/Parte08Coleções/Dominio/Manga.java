@@ -17,7 +17,7 @@ public class Manga implements Comparable<Manga> {
     }
 
     public Manga(Long id, String nome, double preco, int quantidade) {
-        this(id,nome,preco);
+        this(id, nome, preco);
         this.quantidade = quantidade;
     }
 
@@ -87,14 +87,10 @@ public class Manga implements Comparable<Manga> {
 //            return 0;
 //        }else return 1;
 
-        return this.id.compareTo(outroManga.getId());
-//        return this.nome.compareTo(outroManga.getNome());
+//        return this.id.compareTo(outroManga.getId());
+        return this.nome.compareTo(outroManga.getNome());
 //        return Double.valueOf(preco).compareTo(outroManga.getPreco());
 //        return Integer.valueOf(quantidade).compareTo(outroManga.getQuantidade());
-
-
-
-
 
 
     }
