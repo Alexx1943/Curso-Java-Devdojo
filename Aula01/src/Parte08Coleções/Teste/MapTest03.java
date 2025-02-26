@@ -3,9 +3,7 @@ package Parte08Coleções.Teste;
 import Parte08Coleções.Dominio.Consumidor;
 import Parte08Coleções.Dominio.Manga;
 
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class MapTest03 {
     public static void main(String[] args) {
@@ -19,22 +17,21 @@ public class MapTest03 {
         Manga manga5 = new Manga(3L, "Pokemon", 2.99);
 
 
-        List<Manga> listaCompras1 = List.of(manga1, manga2,manga3);
-        List<Manga> listaCompras2 = List.of(manga4, manga5);
+        List<Manga> listaCompras1 = List.of(manga1, manga2, manga3);
+        List<Manga> listaCompras2 = List.of(manga4, manga5,manga1);
 
-        Map<Consumidor, List<Manga>> consumidorManga = new LinkedHashMap<>();
+
+        Map<Consumidor, List<Manga>> consumidorManga = new HashMap<>();
         consumidorManga.put(consumidor1, listaCompras1);
         consumidorManga.put(consumidor2, listaCompras2);
 
-        for (Map.Entry<Consumidor, List<Manga>> entry : consumidorManga.entrySet()){
-            System.out.println(entry.getKey().getNome());
-            for (Manga manga : entry.getValue()){
+
+        for (Map.Entry<Consumidor, List<Manga>> entry : consumidorManga.entrySet()) {
+            System.out.println("----------------------------" + entry.getKey().getNome());
+            for (Manga manga : entry.getValue()) {
                 System.out.println(manga.getNome());
             }
         }
-
-
-
 
 
     }
