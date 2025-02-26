@@ -8,8 +8,6 @@ Através de aulas teóricas, exercícios práticos e projetos, você aprenderá 
 
 ## Objetivos
 
-Ao final deste curso, você será capaz de:
-
 - Entender a sintaxe básica de Java e os principais conceitos de programação orientada a objetos (POO).
 - Trabalhar com estruturas de dados, como arrays, listas, pilhas, filas e mapas.
 - Manipular arquivos e realizar operações de entrada e saída (I/O).
