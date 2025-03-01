@@ -11,9 +11,13 @@ public class WildcardTest02 {
         printConsulta(cachorros);
     }
     // Type erasure
-    private static void printConsulta(List<Animal> animals) {
+    private static void printConsulta(List<? extends Animal> animals) {
         for (Animal animal : animals) {
             animal.consulta();
         }
+    }
+    private  static void printConsultaAnimal(List<? super Animal> animals){
+        animals.add(new Cachorro());
+        animals.add(new Gato());
     }
 }
