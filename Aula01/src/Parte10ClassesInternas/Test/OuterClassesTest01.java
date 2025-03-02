@@ -3,7 +3,7 @@ package Parte10ClassesInternas.Test;
 public class OuterClassesTest01 {
     private String name = "Monkey D. Luffy ";
 
-
+// Nested classe alinhada.
     class Inner{
         public void pritnOuterclassesAttribute(){
             System.out.println(name);
