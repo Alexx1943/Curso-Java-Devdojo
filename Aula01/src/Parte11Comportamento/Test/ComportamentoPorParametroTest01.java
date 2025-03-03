@@ -12,7 +12,7 @@ public class ComportamentoPorParametroTest01 {
     public static void main(String[] args) {
 
         System.out.println(filterByColor(cars, "green"));
-        System.out.println(filterByYear(cars, 2010));
+        System.out.println(filterByYear(cars, 2025));
 
     }
 
