@@ -11,4 +11,10 @@ public class AnimeComparetors {
     public static int compereByEpsodies(Anime a1, Anime a2){
         return Integer.valueOf(a1.getEpsodies()).compareTo(a2.getEpsodies());
     }
+
+    public int copereByEpsodiesNoStatic(Anime a1, Anime a2){
+        return Integer.valueOf(a1.getEpsodies()).compareTo(a2.getEpsodies());
+
+
+    }
 }
