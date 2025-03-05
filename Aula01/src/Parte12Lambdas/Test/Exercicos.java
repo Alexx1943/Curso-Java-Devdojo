@@ -20,6 +20,8 @@ public class Exercicos {
         System.out.println(maiorQue10);
         System.out.println(letraJJ);
 
+        System.out.println("---------------------------");
+
         System.out.println(filterJ);
         System.out.println(filterNumero);
 
