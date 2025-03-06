@@ -1,0 +1,42 @@
+Uma interface funcional em Java é uma interface que possui apenas um único método abstrato.
+A ideia por trás das interfaces funcionais é permitir que elas possam ser utilizadas como expressões lambda.
+
+Características de uma Interface Funcional:
+
+Um único método abstrato: A interface possui apenas um método abstrato (método sem implementação).
+Pode ter métodos default ou estáticos: Mesmo que a interface tenha um único método abstrato,
+ela pode ter métodos default (com implementação) ou métodos estáticos.
+Esses métodos não interferem na natureza funcional da interface, desde que o número de métodos abstratos seja um.
+
+
+
+As três interfaces funcionais mais utilizadas em Java são:
+
+A interface Predicate<T> representa uma função que recebe um único argumento do tipo T e retorna um valor booleano (true ou false).
+Ela é usada principalmente para avaliar uma condição ou fazer um teste em um objeto.
+O objetivo principal do Predicate é testar se um dado elemento atende a uma condição específica,
+o que o torna ideal para operações de filtragem em coleções ou fluxos (Streams).
+Método:
+    boolean test(T t): Recebe um argumento do tipo T e retorna um valor booleano.
+
+
+
+A interface Function<T, R> é usada para representar uma função que recebe um argumento do tipo T e retorna um resultado do tipo R.
+Seu principal uso é para transformar dados de um tipo para outro.
+Ela é muito útil quando você precisa aplicar uma transformação em cada elemento de uma coleção ou fluxo (Stream),
+como transformar um número em uma string ou um objeto de um tipo em outro.
+Método:
+    R apply(T t): Recebe um argumento do tipo T e retorna um valor do tipo R.
+
+
+
+
+A interface Consumer<T> é usada para representar uma operação que recebe um argumento do tipo T e não retorna valor (void).
+Ou seja, o Consumer é utilizado para executar ações em objetos sem que o resultado da operação precise ser retornado.
+Ela é bastante utilizada em cenários onde você precisa iterar ou consumir elementos de uma coleção,
+realizando algum tipo de ação, como imprimir valores ou modificar objetos.
+Método:
+    void accept(T t): Recebe um argumento do tipo T e realiza uma operação sem retornar nenhum valor.
+
+
+
