@@ -12,10 +12,10 @@ public class Exercicos {
 
 
         List<Integer> maiorQue10 = filter(numeros, a1 -> a1 >= 10); // Filtrando com lambda
-        List<String> letraJJ = filter(nomes, a1 -> a1.contains("J")); // Filtrando com Lambda
+        List<String> letraJJ = filter(nomes, a1 -> a1.contains("A")); // Filtrando com Lambda
 
         List<String> filterJ = filter(nomes, Exercicos::letraJ); // Fitrando com method reference.
-        List<Integer> filterNumero = filter(numeros, Exercicos::isMaior); // Filtrando com method reference.
+        List<Integer> filterNumero = filter(numeros, Exercicos::isMaior);// Filtrando com method reference.
 
         System.out.println(maiorQue10);
         System.out.println(letraJJ);
