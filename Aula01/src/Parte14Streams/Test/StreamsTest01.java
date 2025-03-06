@@ -20,12 +20,13 @@ public class StreamsTest01 {
     public static void main(String[] args) {
 
         lightNovels.sort(Comparator.comparing(LightNovel::getTitle)); // Ordenando a lista por title.
-        List<String> titles = new ArrayList<>();
-        for (LightNovel lightNovel: lightNovels){
-            if (lightNovel.getPrice() <=4){
-                titles.add(lightNovel.getTitle());
+        List<String> titles = new ArrayList<>(); // Criando uma lista para receber os objetos seleciados.
+
+        for (LightNovel lightNovel: lightNovels){ // Criando uma variavel local que faz referencia aos objetos da lista.
+            if (lightNovel.getPrice() <=4){ // regra de negocio. caso verdadeiro.
+                titles.add(lightNovel.getTitle()); // adicionar o objeto que passou na resgra de negocio a lista.
             }
-            if (titles.size() >= 3){
+            if (titles.size() >= 3){ // Ao atiginr o tamamha expecificado. Parar
                 break;
             }
         }
