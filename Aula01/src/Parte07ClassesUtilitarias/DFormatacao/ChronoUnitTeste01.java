@@ -6,7 +6,7 @@ import java.time.temporal.ChronoUnit;
 public class ChronoUnitTeste01 {
     public static void main(String[] args) {
 
-        LocalDate tempoDeVida = LocalDate.of(1994,8,7);
+        LocalDate tempoDeVida = LocalDate.of(1996,3,3);
         LocalDate now = LocalDate.now();
 
         System.out.println("Dias: " + ChronoUnit.DAYS.between(tempoDeVida, now));
