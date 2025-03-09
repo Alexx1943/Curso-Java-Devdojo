@@ -9,11 +9,13 @@ public class LambdasTest01 {
 
         List<String> nomes = List.of("Alex", "Allan");
         List<Integer> numeros = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        List<Long> numeross = List.of(1L, 2L, 3L);
         List<Character> chars = List.of('A', 'B', 'C');
 
         forEach(numeros, numero -> System.out.println(numero));
         forEach(nomes, nome -> System.out.println(nome));
         forEach(chars, character -> System.out.println(character));
+        forEach(numeross, l-> System.out.println(l));
 
     }
 
