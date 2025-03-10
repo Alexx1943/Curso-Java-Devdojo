@@ -5,10 +5,17 @@ import java.util.Objects;
 public class LightNovel {
     private String title;
     private double price;
+    private Categoria categoria;
 
     public LightNovel(String title, double price) {
         this.title = title;
         this.price = price;
+    }
+
+    public LightNovel(String title, double price, Categoria categoria) {
+        this.title = title;
+        this.price = price;
+        this.categoria = categoria;
     }
 
     @Override
@@ -16,6 +23,7 @@ public class LightNovel {
         return "LightNovel{" +
                 "title='" + title + '\'' +
                 ", price=" + price +
+                ", categoria=" + categoria +
                 '}';
     }
 
@@ -29,6 +37,10 @@ public class LightNovel {
     @Override
     public int hashCode() {
         return Objects.hashCode(title);
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
     }
 
     public String getTitle() {
