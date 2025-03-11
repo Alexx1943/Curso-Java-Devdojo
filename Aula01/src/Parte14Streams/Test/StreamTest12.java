@@ -5,6 +5,7 @@ import Parte14Streams.Dominio.LightNovel;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class StreamTest12 {
 

@@ -23,7 +23,7 @@ public class StreamsTest02 {
 
         List<String> title = lightNovels.stream()// Retorno de uma lista dos elementos filtrados
                 .sorted(Comparator.comparing(LightNovel::getTitle))//Ordenar a lista LightNovel por titulo.
-                .filter(ln -> ln.getPrice() <= 4)// filtra por preço menor ou igua a 4.
+                .filter(ln -> ln.getPrice() >= 4)// filtra por preço menor ou igua a 4.
                 .limit(3)// Limitar a lista até 3 elementos.
                 .map(LightNovel::getTitle) // Extraindo os elementos baseado nas streams anteriores.
                 .collect(Collectors.toList()); // Coletar tudo oq foi filtrado e lançar na lista criada no inicio da stream.
