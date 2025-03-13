@@ -34,7 +34,8 @@ public class StreamTest13 {
 
         System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 
-        Map<Categoria, Map<Promotion, List<LightNovel>>> collect1 = lightNovels.stream().collect(Collectors.groupingBy(LightNovel::getCategoria, Collectors.groupingBy(ln -> { // Agrupando por categoria
+        Map<Categoria, Map<Promotion, List<LightNovel>>> collect1 = lightNovels.stream().collect(Collectors.groupingBy(LightNovel::getCategoria,
+                Collectors.groupingBy(ln -> { // Agrupando por categoria
             return ln.getPrice() < 6 ? Promotion.UNDER_PROMOTION : Promotion.NNORMAL_PRICE; // Agrupando por promoção
         })));
 
