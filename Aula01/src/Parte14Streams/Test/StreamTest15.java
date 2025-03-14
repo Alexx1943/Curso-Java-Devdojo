@@ -4,7 +4,6 @@ import Parte14Streams.Dominio.Categoria;
 import Parte14Streams.Dominio.LightNovel;
 import Parte14Streams.Dominio.Promotion;
 
-import java.rmi.MarshalledObject;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -38,8 +37,8 @@ public class StreamTest15 {
                             return ln.getPrice() < 3 ? Promotion.UNDER_PROMOTION : Promotion.NNORMAL_PRICE;
                         })));
 
-        for (Map.Entry<Categoria, Map<Promotion, List<LightNovel>>> entry : collect1.entrySet()){
-            System.out.println(entry.getKey()+"-"+entry.getValue());
+        for (Map.Entry<Categoria, Map<Promotion, List<LightNovel>>> entry : collect1.entrySet()) {
+            System.out.println(entry.getKey() + "-" + entry.getValue());
         }
 
     }
