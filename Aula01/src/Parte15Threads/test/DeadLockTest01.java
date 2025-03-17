@@ -18,10 +18,10 @@ public class DeadLockTest01 {
 
         Runnable r2 = () -> {
             synchronized (lock2) {
-                System.out.println("Thread 1: Segurando lock1");
-                System.out.println("Thread 1: Segurando lock2");
+                System.out.println("Thread 2: Segurando lock2");
+                System.out.println("Thread 2: Esperando lock1");
                 synchronized (lock1) {
-                    System.out.println("Thread 1: Segurando lock2");
+                    System.out.println("Thread 2: Segurando lock1");
                 }
             }
         };
