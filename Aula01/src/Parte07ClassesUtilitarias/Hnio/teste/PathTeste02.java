@@ -6,24 +6,28 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
+
 public class PathTeste02 {
     public static void main(String[] args) throws IOException {
 
         Path pastaPath = Paths.get("pasta");
         if (Files.notExists(pastaPath)) {
-            Path pastaDiretorio = Files.createDirectory(pastaPath);
+            Path pastaDirectory = Files.createDirectory(pastaPath); // Para criar um diretoria
+            System.out.println(pastaDirectory);
         }
+        Path subPastaPath = Paths.get("pasta/subpas/subsubpasta");
+        Path subPastaDirectories = Files.createDirectories(subPastaPath); // Para criar varios diretorios
+        System.out.println(subPastaDirectories);
 
-        Path subPastaPath = Paths.get("pasta/subpasta/subsubpasta");
-        Path subPastaDiretory = Files.createDirectories(subPastaPath);
         Path filePath = Paths.get(subPastaPath.toString(), "file.txt");
         if (Files.notExists(filePath)) {
             Path filePathCreated = Files.createFile(filePath);
+            System.out.println(filePathCreated); // Criando um arquivo com caminho.
         }
 
         Path source = filePath;
-        Path targert = Paths.get(filePath.getParent().toString(), "file_renamed");
-        Files.copy(source, targert, StandardCopyOption.REPLACE_EXISTING);
+        Path target = Paths.get(filePath.getParent().toString(),"file_renamed.txt");
+        Files.copy(source,target, StandardCopyOption.REPLACE_EXISTING);
 
 
     }
