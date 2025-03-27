@@ -16,8 +16,7 @@ class Worker implements Runnable {
     public void run() {
         lock.lock();
         try {
-            if (lock.isHeldByCurrentThread()) ;
-            { // Veifica se o lock está com a thread que tá executando.
+            if (lock.isHeldByCurrentThread()) ;{ // Veifica se o lock está com a thread que tá executando.
                 System.out.printf("Thread %s entrou em uma seção critica %n", name); // %s = String..
             }
             System.out.printf("%d Thread esperando na fila %n", lock.getQueueLength()); // %d = inteiro. %f = float. %n = pular linha.
