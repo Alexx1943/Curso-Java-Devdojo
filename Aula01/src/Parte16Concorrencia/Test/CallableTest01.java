@@ -1,22 +1,28 @@
 package Parte16Concorrencia.Test;
 
-import java.util.Arrays;
-import java.util.List;
+
+import java.util.concurrent.*;
+
+class RandomNumberCallable implements Callable<String> {
+    @Override
+    public String call() throws Exception {
+        int num = ThreadLocalRandom.current().nextInt(1, 11);
+        for (int i = 0; i < num; i++) {
+            System.out.printf("%s Executando uma tarefa Callable...%n",Thread.currentThread().getName());
+        }
+        return String.format("%s finished and the random number  is %d", Thread.currentThread().getName(),num);
+    }
+}
 
 public class CallableTest01 {
-    public static void main(String[] args) {
-        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        List<String> words = Arrays.asList("java", "stream", "lambda", "example");
-        
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
 
-        numbers.stream()
-                .filter(n -> n %2 == 0)
-                .forEach(System.out::println);
-
-        words.stream()
-                .map(String::toLowerCase)
-                .forEach(System.out::println);
-
+        RandomNumberCallable randomNumberCallable = new RandomNumberCallable();
+        ExecutorService executorService = Executors.newFixedThreadPool(2);
+        Future<String> future = executorService.submit(randomNumberCallable);
+        String s = future.get();
+        System.out.printf("finish program: %s",s);
+        executorService.shutdown();
 
 
 
