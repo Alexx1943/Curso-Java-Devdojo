@@ -18,7 +18,10 @@ public class StreamTest13 {
             new LightNovel("A outra historia americana", 4.00, Categoria.ROMANCE),
             new LightNovel("Carga explosiva", 10.90, Categoria.ACION),
             new LightNovel("O poderoso chefão", 0.90, Categoria.ROMANCE),
-            new LightNovel("Carga explosiva2", 3.00, Categoria.FANTASY)
+            new LightNovel("Carga explosiva2", 3.00, Categoria.FANTASY),
+            new LightNovel("O nome da rosa", 6.00, Categoria.ROMANCE),
+            new LightNovel("3 mil milhas para o inferno", 8.00, Categoria.DRAMA),
+            new LightNovel("No rastro da bala", 7.99, Categoria.DRAMA)
     ));
 
     public static void main(String[] args) {
