@@ -5,7 +5,6 @@ import Parte16Concorrencia.Service.StoreService;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class CompletableFutureTest02 {
     public static void main(String[] args) {
@@ -23,10 +22,12 @@ public class CompletableFutureTest02 {
                 .map(storeService::getPricesAsSyncCompletableFuture)
                 .collect(Collectors.toList());
 
-        Stream<Double> prices = completableFutures.stream()
-                .map(CompletableFuture::join);
+        List<Double> prices = completableFutures.stream()
+                .map(CompletableFuture::join)
+                .collect(Collectors.toList());
 
         System.out.println(prices);
+
 
         long end = System.currentTimeMillis();
         System.out.printf("Time passed to searchPricesSync %dms%n", (end - start));
