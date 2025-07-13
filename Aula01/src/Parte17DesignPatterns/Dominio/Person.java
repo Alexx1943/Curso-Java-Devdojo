@@ -6,6 +6,8 @@ public class Person {
     private String lastName;
     private String userName;
     private String email;
+    public static String name = "Alex";
+    public static String name1 = "Alex";
 
     private Person(String firstName, String lastName, String userName, String email) {
         this.firstName = firstName;
